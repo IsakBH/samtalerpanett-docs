@@ -1,4 +1,5 @@
 [book]
 title = "Samtaler På Nett Dokumentasjon"
+description = "Dokumentasjon for chatteprogrammet Samtaler På Nett."
 authors = ["isakbh"]
-language = "en"
+language = "no"
