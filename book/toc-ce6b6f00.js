@@ -8,7 +8,7 @@ class MDBookSidebarScrollbox extends HTMLElement {
         super();
     }
     connectedCallback() {
-        this.innerHTML = '<ol class="chapter"><li class="chapter-item expanded "><span class="chapter-link-wrapper"><a href="introduksjon.html"><strong aria-hidden="true">1.</strong> Introduksjon</a></span></li><li class="chapter-item expanded "><span class="chapter-link-wrapper"><a href="kfespn.html"><strong aria-hidden="true">2.</strong> Ke faen e SPN?</a></span></li><li class="chapter-item expanded "><span class="chapter-link-wrapper"><a href="databaseinclude.html"><strong aria-hidden="true">3.</strong> Database include fil</a></span></li></ol>';
+        this.innerHTML = '<ol class="chapter"><li class="chapter-item expanded "><span class="chapter-link-wrapper"><a href="introduksjon.html"><strong aria-hidden="true">1.</strong> Introduksjon</a></span></li><li class="chapter-item expanded "><span class="chapter-link-wrapper"><a href="kfespn.html"><strong aria-hidden="true">2.</strong> Ke faen e SPN?</a></span></li><li class="chapter-item expanded "><span class="chapter-link-wrapper"><a href="databaseinclude.html"><strong aria-hidden="true">3.</strong> Database include fil</a></span></li><li class="chapter-item expanded "><span class="chapter-link-wrapper"><a href="verdtanevne.html"><strong aria-hidden="true">4.</strong> Verdt å nevne</a></span></li></ol>';
         // Set the current, active page, and reveal it if it's hidden
         let current_page = document.location.href.toString().split('#')[0].split('?')[0];
         if (current_page.endsWith('/')) {
