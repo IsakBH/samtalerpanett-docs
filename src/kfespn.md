@@ -2,7 +2,7 @@
 [Samtaler På Nett](https://isak.brunhenriksen.no/samtalerpanett) (SPN) er et nydelig chatte program laget av to alfaer med navn Isak Brun og Viggo Weiss. Det er skrevet i PHP og Javascript med bruk av biblioteket [Ratchet](http://socketo.me/).
 
 ## Hvem er Samtaler På Nett laget for?
-Kule folk som ikke vil bli bannlyst på [Discord](https://discord.com) for å BLI spammet.
+Kule folk som ikke vil bli bannlyst på [Discord](https://discord.com) for å BLI spammet (de som vet).
 
 ## Er det et seriøst prosjekt?
 Umm... Nei? Eller jo? Det er laget for gøy.
