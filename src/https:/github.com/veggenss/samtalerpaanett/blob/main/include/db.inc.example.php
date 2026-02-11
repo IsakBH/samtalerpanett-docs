@@ -1,0 +1,1 @@
+# db.inc.example.php
