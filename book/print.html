@@ -36,10 +36,10 @@
             const path_to_root = "";
             const default_light_theme = "light";
             const default_dark_theme = "navy";
-            window.path_to_searchindex_js = "searchindex-c705acef.js";
+            window.path_to_searchindex_js = "searchindex-bebc7b66.js";
         </script>
         <!-- Start loading toc.js asap -->
-        <script src="toc-ce6b6f00.js"></script>
+        <script src="toc-ef361018.js"></script>
     </head>
     <body>
     <div id="mdbook-help-container">
@@ -240,6 +240,38 @@ function dbConnection()
 // vent... jeg vet ikke om dette er et problem på windows en gang... men hvis det er det, så er løsningen her i hvertfall! vet at det er et problem på ordentlige operativsystemer, altså, UNIX-baserte OS-er. - Isak 25/05/25 19:47
 // fant nettopp ut av at det ikke er et problem på windows :( jeg skrev hele den kommentaren for ingenting. vel ikke fjern den! jeg la så mye innsats inn i den!!!! - Isak 25/05/25 19:57
 // FUCK WINDOWS! nå er jeg frustrert på windows brukeres vegne. dette er unsafe design av microsoft! alle brukere har jo fanken i lanken meg tilgang til alle filer og mapper? hva er det for noe drit? det gjør at hvis du har et virus som kjører under sin egen bruker på pcen, så har den tilgang til alle filer på pcen? bro? hva faen tenkte microsoft på når de gjorde det på den måten? - Isak 25/05/25 20:07
+</code></pre>
+<div style="break-before: page; page-break-before: always;"></div>
+<h1 id="composerjson"><a class="header" href="#composerjson">Composer.json</a></h1>
+<p>Composer.json er en fil som forteller både <a href="https://getcomposer.org/">Composer</a> og mennesker som leser den litt informasjon om <a href="https://isak.brunhenriksen.no/samtalerpanett">Samtaler På Nett</a>. Den inneholder dependencies, navn, beskrivelse, forfattere og mer. Det er viktig at det ikke er noe feil om den, og at den er som den skal. Dette vil si: ikke fuck med den pls. Prøv å la Composer deale med alle insertions inn i den, og hvis det er noe du vil legge til så vennligst sjekk <a href="https://getcomposer.org/doc/04-schema.md">dokumentasjonen til Composer</a>.</p>
+<p>Slik ser vår <code>composer.json</code> ut:</p>
+<pre><code class="language-json">{
+    "require": {
+        "phpmailer/phpmailer": "^7.0",
+        "vlucas/phpdotenv": "^5.6",
+        "cboden/ratchet": "^0.4.4"
+    },
+
+    "license": "MIT",
+    "name": "isaveg/samtalerpanett",
+    "description": "Et fint chatteprogram laget av Brun og Weiss",
+    "type": "project",
+    "authors": [
+        {
+            "name": "Isak Brun Henriksen",
+            "email": "isak@brunhenriksen.net",
+            "homepage": "https://isak.brunhenriksen.no",
+            "role": "Developer"
+        },
+        {
+            "name": "Viggo Weissmuller",
+            "email": "veggene.v@gmail.com",
+            "homepage": "https://veggenss.github.io/MinSide2025/",
+            "role": "Developer"
+        }
+    ]
+}
+
 </code></pre>
 
                     </main>
