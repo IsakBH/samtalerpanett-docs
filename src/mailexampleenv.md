@@ -1,1 +1,9 @@
 # mail.example.env
+```yaml
+MAIL_HOST=smtp.gmail.com
+MAIL_USERNAME=your.mail.here@domain.net
+MAIL_PASSWORD="yourpasswordhere"
+MAIL_PORT="someport"
+MAIL_ENCRYPTION="encryptionhere"
+
+```

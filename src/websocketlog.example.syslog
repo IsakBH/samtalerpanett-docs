@@ -1,1 +1,13 @@
 # websocketlog.example.syslog
+```yaml
+[2025/10/26 Sunday:17:22:00] User 37 | 70 has Connected
+[2025/10/26 Sunday:18:42:34] User 1 | 70 has Connected
+[2025/10/26 Sunday:18:42:45] User 1 | 70 has disconnected
+[2025/10/26 Sunday:18:42:45] User 1 | 111 has Connected
+[2025/10/26 Sunday:18:42:46] User 1 | 111 has disconnected
+[2025/10/26 Sunday:18:42:46] User 1 | 116 has Connected
+[2025/10/26 Sunday:18:43:24] User 1 | 116 has disconnected
+[2025/10/26 Sunday:18:43:24] User 1 | 121 has Connected
+[2025/10/26 Sunday:18:43:25] User 1 | 121 has disconnected
+[2025/10/26 Sunday:18:43:25] User 1 | 126 has Connected
+```

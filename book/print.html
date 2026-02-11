@@ -36,10 +36,10 @@
             const path_to_root = "";
             const default_light_theme = "light";
             const default_dark_theme = "navy";
-            window.path_to_searchindex_js = "searchindex-d21497ab.js";
+            window.path_to_searchindex_js = "searchindex-20a02e26.js";
         </script>
         <!-- Start loading toc.js asap -->
-        <script src="toc-cb35019f.js"></script>
+        <script src="toc-04c33061.js"></script>
     </head>
     <body>
     <div id="mdbook-help-container">
@@ -286,14 +286,77 @@ function dbConnection()
 </ul>
 <div style="break-before: page; page-break-before: always;"></div>
 <h1 id="setupwebsocketjs"><a class="header" href="#setupwebsocketjs">setupwebsocket.js</a></h1>
+<pre><code class="language-js">function setupWebSocket() {
+    ws = new WebSocket(
+        "ws://localhost:8080/chat?userId=" + encodeURIComponent(currentUserId),
+    );
+
+    ws.onopen = () =&gt; {
+        console.log("Tilkobling til websocket åpnet :)");
+        ws.send(JSON.stringify({ type: "register", user_id: currentUserId }));
+    };
+
+    ws.onclose = () =&gt; {
+        console.log("Tilkobling til websocket lukket :(");
+        appendSystemMessage("Tilkoblingen ble lukket. :(");
+    };
+
+    ws.onmessage = (event) =&gt; {
+        const data = JSON.parse(event.data);
+        console.log(data);
+        appendMessage(data);
+        messagesDiv.scrollTop = messagesDiv.scrollHeight;
+    };
+}
+</code></pre>
 <div style="break-before: page; page-break-before: always;"></div>
 <h1 id="dbincexamplephp"><a class="header" href="#dbincexamplephp">db.inc.example.php</a></h1>
+<pre><code class="language-php">&lt;?php
+function dbConnection()
+{
+    $db_server = "localhost";
+    $db_user = "dbUsername";
+    $db_pass = "dbUserPass";
+    $db_name = "dbName";
+    $conn = "";
+
+    $conn = mysqli_connect($db_server, $db_user, $db_pass, $db_name);
+    if (!$conn) {
+        die("Connection failed: " . mysqli_connect_error());
+    }
+
+    return $conn;
+}
+
+$protocol = 'http';
+$hostname = 'localhost';
+$port = 8080;
+</code></pre>
 <div style="break-before: page; page-break-before: always;"></div>
 <h1 id="mailexampleenv"><a class="header" href="#mailexampleenv">mail.example.env</a></h1>
+<pre><code class="language-yaml">MAIL_HOST=smtp.gmail.com
+MAIL_USERNAME=your.mail.here@domain.net
+MAIL_PASSWORD="yourpasswordhere"
+MAIL_PORT="someport"
+MAIL_ENCRYPTION="encryptionhere"
+
+</code></pre>
 <div style="break-before: page; page-break-before: always;"></div>
 <h1 id="websocket_errorexamplelog"><a class="header" href="#websocket_errorexamplelog">websocket_error.example.log</a></h1>
+<p>Denne eksempel filen er tom. Filen fylles inn dynamisk av webserveren når den får en error.</p>
 <div style="break-before: page; page-break-before: always;"></div>
 <h1 id="websocketlogexamplesyslog"><a class="header" href="#websocketlogexamplesyslog">websocketlog.example.syslog</a></h1>
+<pre><code class="language-yaml">[2025/10/26 Sunday:17:22:00] User 37 | 70 has Connected
+[2025/10/26 Sunday:18:42:34] User 1 | 70 has Connected
+[2025/10/26 Sunday:18:42:45] User 1 | 70 has disconnected
+[2025/10/26 Sunday:18:42:45] User 1 | 111 has Connected
+[2025/10/26 Sunday:18:42:46] User 1 | 111 has disconnected
+[2025/10/26 Sunday:18:42:46] User 1 | 116 has Connected
+[2025/10/26 Sunday:18:43:24] User 1 | 116 has disconnected
+[2025/10/26 Sunday:18:43:24] User 1 | 121 has Connected
+[2025/10/26 Sunday:18:43:25] User 1 | 121 has disconnected
+[2025/10/26 Sunday:18:43:25] User 1 | 126 has Connected
+</code></pre>
 
                     </main>
 
